@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "amatic_scregular";
+  src: url("../fonts/fonts2/amaticsc-regular-webfont.woff2") format("woff2"),
+    url("../fonts/fonts2/amaticsc-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "amatic_scregular", sans-serif;
+  margin: 0;
+}
+.container {
+  display: flex;
+}
+
+.left-panel {
+  background-color: rgb(233, 233, 233);
+  text-align: center;
+  flex: 1;
+  background-image: url("../photos/sarah-dorweiler.jpg");
+  background-size: 150%; 
+  background-repeat: no-repeat;
+  background-position: 40% center;
+  min-height: 100vh;
+}
+
+.right-panel {
+  flex: 2;
+}
+
+#odin {
+  background-color: rgba(206, 206, 206, 0.5);
+  text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.5); */
+}
+
+h2 {
+  margin-top: 100px;
+  font-size: 82px;
+  color: rgb(94, 94, 94);
+}

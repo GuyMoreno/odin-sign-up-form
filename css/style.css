@@ -6,35 +6,67 @@
   font-style: normal;
 }
 * {
-  font-family: "amatic_scregular", sans-serif;
   margin: 0;
+  padding: 0;
 }
+
 .container {
   display: flex;
+  min-height: 100vh;
 }
 
 .left-panel {
-  background-color: rgb(233, 233, 233);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   flex: 1;
+  font-family: "amatic_scregular", sans-serif;
+  align-items: center;
+  /* background */
+  background-color: rgb(233, 233, 233);
   background-image: url("../photos/sarah-dorweiler.jpg");
-  background-size: 150%; 
+  background-size: 150%;
   background-repeat: no-repeat;
   background-position: 40% center;
   min-height: 100vh;
 }
 
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  margin-top: 100px;
+  background-color: rgba(206, 206, 206, 0.5);
+  text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.5);
+}
+
 .right-panel {
   flex: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #odin {
-  background-color: rgba(206, 206, 206, 0.5);
+  /* background-color: rgba(206, 206, 206, 0.5);
   text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.5); */
+  margin: 0;
+  font-size: 90px;
+  color: rgb(94, 94, 94);
+  /* margin-top: 60px; */
 }
 
-h2 {
-  margin-top: 100px;
-  font-size: 82px;
-  color: rgb(94, 94, 94);
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.footer-left-panel {
+  margin-top: auto;
+  padding: 10px;
+  background-color: rgb(233, 233, 233);
+  font-size: large;
+  font-weight: bolder;
 }

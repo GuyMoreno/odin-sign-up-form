@@ -7,66 +7,79 @@
 }
 * {
   margin: 0;
+  height: 100%;
   padding: 0;
+}
+
+html,
+body {
+  height: 90%;
 }
 
 .container {
   display: flex;
-  min-height: 100vh;
+  background-color: whitesmoke;
+  padding: 2px;
+  border: 1px lightgray;
+  flex-basis: 1;
+  height: 100%;
+  width: 100%;
+  /* gap: 100px; */
 }
 
-.left-panel {
+.item {
+  /* background-color: peachpuff; */
+  border: 4px solid salmon;
+  height: auto;
+  flex: 1;
+  flex-shrink: 0;
+  margin: 4px;
+  overflow: none;
+  padding: 20px;
+  height: 100vh;
+}
+
+#left-sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  flex: 1;
-  font-family: "amatic_scregular", sans-serif;
-  align-items: center;
-  /* background */
-  background-color: rgb(233, 233, 233);
-  background-image: url("../photos/sarah-dorweiler.jpg");
-  background-size: 150%;
+  /* align-items: center; */
+  gap: 1px;
+  font-family: "amatic_scregular";
+  font-size: 100px;
+  text-align: center;
+  background-image: url(../photos/christopher-burns.jpg);
   background-repeat: no-repeat;
-  background-position: 40% center;
-  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid whitesmoke;
+  flex-grow: 1;
 }
 
-.logo-title {
+.sidebar-header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 15px;
-  margin-top: 100px;
-  background-color: rgba(206, 206, 206, 0.5);
-  text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.5);
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 200px;
+  margin-left: 60px;
 }
 
-.right-panel {
-  flex: 2;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 35px;
 }
 
-#odin {
-  /* background-color: rgba(206, 206, 206, 0.5);
-  text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.5); */
-  margin: 0;
-  font-size: 90px;
-  color: rgb(94, 94, 94);
-  /* margin-top: 60px; */
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-  margin-right: 10px;
-  object-fit: contain;
-}
-
-.footer-left-panel {
+.footer-left {
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+  position: fixed;
+  bottom: 50;
   margin-top: auto;
-  padding: 10px;
-  background-color: rgb(233, 233, 233);
-  font-size: large;
-  font-weight: bolder;
+}
+
+#right-sidebar {
+  background-color: lightgray;
+  border: 4px solid whitesmoke;
+  flex-grow: 2;
+  flex-shrink: 1;
 }

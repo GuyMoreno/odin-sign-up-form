@@ -5,10 +5,16 @@
   font-weight: normal;
   font-style: normal;
 }
+
+:root {
+  --primaty-clr: rgb(89, 123, 150);
+}
+
 * {
   margin: 0;
   height: 100%;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -20,7 +26,8 @@ body {
   display: flex;
   background-color: whitesmoke;
   padding: 2px;
-  border: 1px lightgray;
+  border: 1px whitesmoke;
+  margin: 0;
   flex-basis: 1;
   height: 100%;
   width: 100%;
@@ -42,8 +49,7 @@ body {
 #left-sidebar {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  gap: 1px;
+  gap: 0px;
   font-family: "amatic_scregular";
   font-size: 100px;
   text-align: center;
@@ -57,7 +63,12 @@ body {
 
 .sidebar-header {
   display: flex;
-  flex-direction: row;
+  position: sticky;
+  /* background-color: #dfdfdf7e;
+  display: flex;
+  flex-direction: row; */
+  font-size: 7rem;
+  font-weight: 800px;
   gap: 30px;
   margin-top: 200px;
   margin-left: 60px;
@@ -72,14 +83,78 @@ body {
 .footer-left {
   font-family: "Courier New", Courier, monospace;
   font-size: small;
-  position: fixed;
-  bottom: 50;
-  margin-top: auto;
+  color: brown;
+  font-weight: 700;
+  flex: 0;
 }
 
+/* RIGHT SIDE BAR👇🏽 */
+
 #right-sidebar {
-  background-color: lightgray;
+  display: flex;
+  background-color: var(--primaty-clr);
   border: 4px solid whitesmoke;
   flex-grow: 2;
-  flex-shrink: 1;
+  /* flex-shrink: 1; */
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  width: 100%;
+}
+
+/* RIGHT SIDEBAR CONTENT 👇🏽 */
+
+.right-sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.first-right {
+  display: flex;
+  background-color: var(--primaty-clr);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  padding: 40px;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+#second-right {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(213, 219, 221);
+  border: black dotted;
+  flex-grow: 2;
+  padding: 20px;
+  /* height: 2000px; */
+}
+
+.third-right {
+  display: flex;
+  flex-grow: 1;
+  /* flex-shrink: 0; */
+}
+
+.text {
+  font-size: 50px;
+  margin-top: 0px;
+}
+
+span {
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
+#form,
+div.row {
+  gap: 5rem;
+  padding: 20px
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 80%;
+  margin: 0 0 40px 0;
 }

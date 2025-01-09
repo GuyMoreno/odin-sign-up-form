@@ -8,95 +8,113 @@
   </head>
   <body>
     <div class="container">
-      <div class="item" id="left-sidebar">
-        <div class="sidebar-header">
-          <img
-            src="../odin-sign-up-form/photos/habit-icon.png"
-            alt="icon"
-            class="icon"
-          />
-          <div class="header">Doing</div>
+      <div class="left">
+        <div class="header">
+          <!-- Below, the img is IN the Header... -->
+          <h1>
+            <img
+              src="../odin-sign-up-form/photos/habit-icon.png"
+              alt="icon"
+              class="icon"
+            />Doing
+          </h1>
         </div>
-        <div class="footer-left">
-          Thanks to Christopher Burns for the photo & Thanks Freepik for the
-          Logo
+        <!-- 👆Closing HEADER div -->
+        <div class="footer">
+          Thanks Christopher Burns for the photo & Freepik for the logo
         </div>
+        <!-- 👆Closing FOOTER div -->
       </div>
-      <div class="item" id="right-sidebar">
-        <div class="right-sidebar-content">
-          <div class="first-right" id="first-right">
-            <p>
-              This is not a real online service! You know you need something
-              like this in your life to help you realize your deepest dreams.
-              Sign up now to get started. <br /><br />
-              You know you want to.
-            </p>
-          </div>
-          <div class="second-right" id="second-right">
-            <p class="text">Let's do this!</p>
-            <p>Required fields are marked with an asterisk (*).</p>
-            <div class="row">
-              <form id="form" action="" method="post">
-                <label for="first-name">First Name*</label>
+      <!-- 👆closing LEFT div -->
+      <div class="right">
+        <div class="right-first">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            now to get started. <br /><br />
+
+            You know you want to.
+          </p>
+        </div>
+        <!-- 👆closing RIGHT-FIRST div -->
+        <div class="right-second">
+          <p class="text">Let's do this!</p>
+          <div class="form">
+            <form id="form" action="" method="post">
+              <div class="fields-first">
+                <label for="first-name">First Name</label>
+
                 <input
                   type="text"
                   id="first-name"
                   name="first-name"
                   placeholder="John"
                 />
-  
-                <label for="last-name">Last Name*</label>
+
+                <label for="email">E-mail</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="johnsmith@mail.com"
+                />
+
+                <label for="password">Password</label>
+
+                <input
+                  type="password"
+                  id="password"
+                  name="ppassword"
+                  placeholder="************"
+                />
+              </div>
+              <!--👆closing FIELDS-FIRST div  -->
+
+              <div class="fields-second">
+                <label for="last-name">Last Name</label>
+
                 <input
                   type="text"
                   id="last-name"
                   name="last-name"
                   placeholder="Smith"
                 />
-            </div>
-           
-            <div class="row">
-              <label for="email">E-mail*</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="johnsmith@mail.com"
-              />
 
-              <label for="phone-number">Phone Number*</label>
-              <input
-                type="tel"
-                id="phone-number"
-                name="phone-number"
-                placeholder="050-4448886"
-              />
+                <label for="phone-number">Phone Number</label>
 
-            </div>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                  placeholder="050-4448886"
+                />
+                <label for="comfirm-password">Confirm password</label>
 
-            <div class="row">
-              <label for="password">Password*</label>
-              <input
-                type="password"
-                id="password"
-                name="ppassword"
-                placeholder="************"
-              />
-
-              <label for="comfirm-password">Confirm password*</label>
-              <input
-                type="password"
-                id="comfirm-password"
-                name="comfirm-password"
-                placeholder="************"
-              />
-
-            </div>
-
+                <input
+                  type="password"
+                  id="comfirm-password"
+                  name="comfirm-password"
+                  placeholder="************"
+                />
+              </div>
+              <!--👆closing FIELDS-SECOND div  -->
             </form>
+            <div class="button">
+              <button>Create an Account</button>
+            </div>
           </div>
-          <div class="third-right" id="third-right"></div>
+          <!-- 👆closing FORM div -->
         </div>
+        <!-- 👆closing RIGHT-SECOND div -->
+        <div class="right-third">
+          <span>Already have an account?</span>
+          <a href="" class="sign-in-link">Sign in</a>
+        </div>
+        <!-- 👆closing RIGHT-THIRD div -->
       </div>
+      <!-- 👆closing RIGHT div -->
     </div>
+    <!-- 👆closing CONTAINER div -->
   </body>
 </html>

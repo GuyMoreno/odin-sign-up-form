@@ -10,151 +10,191 @@
   --primaty-clr: rgb(89, 123, 150);
 }
 
-* {
-  margin: 0;
-  height: 100%;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 90%;
-}
-
 .container {
   display: flex;
-  background-color: whitesmoke;
-  padding: 2px;
-  border: 1px whitesmoke;
-  margin: 0;
-  flex-basis: 1;
-  height: 100%;
-  width: 100%;
-  /* gap: 100px; */
-}
-
-.item {
-  /* background-color: peachpuff; */
-  border: 4px solid salmon;
-  height: auto;
-  flex: 1;
-  flex-shrink: 0;
-  margin: 4px;
-  overflow: none;
-  padding: 20px;
   height: 100vh;
+  gap: 10px;
+  /* background-image: url(../photos/christopher-burns.jpg); */
+  background-color: #fff;
 }
 
-#left-sidebar {
+.left {
   display: flex;
+  flex: 3;
   flex-direction: column;
-  gap: 0px;
-  font-family: "amatic_scregular";
-  font-size: 100px;
-  text-align: center;
+  /* border: dotted pink 7px; */
   background-image: url(../photos/christopher-burns.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border: 4px solid whitesmoke;
-  flex-grow: 1;
 }
 
-.sidebar-header {
+.header {
   display: flex;
-  position: sticky;
-  /* background-color: #dfdfdf7e;
+  /* border: dotted rgb(220, 255, 192) 7px; */
+  font-family: "amatic_scregular";
+  gap: 70px;
+}
+
+.header h1 {
   display: flex;
-  flex-direction: row; */
+  gap: 18px;
+
+  align-items: center;
   font-size: 7rem;
-  font-weight: 800px;
-  gap: 30px;
-  margin-top: 200px;
-  margin-left: 60px;
+  margin-left: 70px;
+  margin-top: 220px;
+  width: max-content;
+  top: 18px;
+  left: 10px;
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  margin-top: 35px;
+.header img {
+  /* float: left; */
+  width: 4rem;
+  height: 4rem;
 }
 
-.footer-left {
-  font-family: "Courier New", Courier, monospace;
-  font-size: small;
-  color: brown;
-  font-weight: 700;
-  flex: 0;
+.footer {
+  font-size: 0.8rem;
+  padding: 3px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* border: dotted rgb(192, 205, 255) 7px; */
+  color: aliceblue;
+  margin-top: auto;
 }
 
-/* RIGHT SIDE BAR👇🏽 */
+/* 👆Finish LEFT DIV design */
 
-#right-sidebar {
+.right {
   display: flex;
+  flex-direction: column;
+  flex: 7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* border: dotted pink 7px; */
   background-color: var(--primaty-clr);
-  border: 4px solid whitesmoke;
-  flex-grow: 2;
-  /* flex-shrink: 1; */
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  width: 100%;
+  gap: 10px;
+  padding: 50px;
 }
 
-/* RIGHT SIDEBAR CONTENT 👇🏽 */
-
-.right-sidebar-content {
+.right-first {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.first-right {
-  display: flex;
-  background-color: var(--primaty-clr);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 25px;
-  padding: 40px;
   flex-grow: 1;
-  min-height: 0;
+  /* border: dotted black 7px; */
+  font-size: 30px;
+  /* padding: 50px; */
 }
 
-#second-right {
+.right-second {
   display: flex;
   flex-direction: column;
-  background-color: rgb(213, 219, 221);
-  border: black dotted;
-  flex-grow: 2;
-  padding: 20px;
-  /* height: 2000px; */
-}
-
-.third-right {
-  display: flex;
-  flex-grow: 1;
-  /* flex-shrink: 0; */
+  flex-grow: 4;
 }
 
 .text {
-  font-size: 50px;
-  margin-top: 0px;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  /* ss */
+  /* background-color: #fff; */
+  /* padding: 20px; */
+  border-radius: 15px;
+  width: 100%;
+}
+
+form label {
+  font-size: 1.2rem;
+  font-family: monospace;
+  font-weight: bold;
+  /* color: #555; */
+  /* margin-bottom: 5px; */
+  display: block;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.fields-first,
+.fields-second {
+  display: flex;
+  flex-direction: column;
+}
+
+input::placeholder {
+  color: #dedede;
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 1;
+}
+
+input:hover {
+  background-color: #276c6c;
+  color: black;
+  /* border: solid 10px bisque; */
+}
+
+button {
+  margin-top: 10px;
+  background-color: #dcddde;
+  color: rgb(35, 34, 34);
+  font-size: 16px;
+  padding: 10px 20px;
+  border: solid seashell;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease; /* אנימציות */
+}
+
+button:hover {
+  background-color: #dcddde; /* צבע רקע כהה יותר */
+  transform: translateY(-2px); /* אפקט מרחף */
+}
+
+/* שינוי צבע ברקע כשנלחץ על הכפתור */
+button:active {
+  background-color: #003b63;
+  color: #fff;
+  transform: translateY(0); /* מבטל את האפקט המרחף */
 }
 
 span {
-  margin-top: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
 }
 
-#form,
-div.row {
-  gap: 5rem;
-  padding: 20px
-  border: 1px solid #D6D9DC;
-  border-radius: 3px;
-  width: 80%;
-  margin: 0 0 40px 0;
+.right-third {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  /* border: dotted black 7px; */
+  gap: 5px;
 }

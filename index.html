@@ -21,7 +21,7 @@
         </div>
         <!-- 👆Closing HEADER div -->
         <div class="footer">
-          Thanks Christopher Burns for the photo & Freepik for the logo
+          Photo credit: Christopher Burns | Logo credit: Freepik.
         </div>
         <!-- 👆Closing FOOTER div -->
       </div>
@@ -40,7 +40,7 @@
         <div class="right-second">
           <p class="text">Let's do this!</p>
           <div class="form">
-            <form id="form" action="" method="post">
+            <form id="form" action="#" method="post">
               <div class="fields-first">
                 <label for="first-name">First Name</label>
 
@@ -49,25 +49,32 @@
                   id="first-name"
                   name="first-name"
                   placeholder="John"
+                  minlength="3"
                 />
 
-                <label for="email">E-mail</label>
+                <label for="email">*E-mail</label>
 
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="johnsmith@mail.com"
+                  required
                 />
 
-                <label for="password">Password</label>
+                <label for="password">*Password</label>
 
                 <input
                   type="password"
                   id="password"
+                  required
                   name="ppassword"
                   placeholder="************"
                 />
+
+                <div class="button">
+                  <button type="submit">Create an Account</button>
+                </div>
               </div>
               <!--👆closing FIELDS-FIRST div  -->
 
@@ -100,9 +107,6 @@
               </div>
               <!--👆closing FIELDS-SECOND div  -->
             </form>
-            <div class="button">
-              <button>Create an Account</button>
-            </div>
           </div>
           <!-- 👆closing FORM div -->
         </div>

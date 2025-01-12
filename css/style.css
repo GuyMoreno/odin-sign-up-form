@@ -10,6 +10,10 @@
   --primaty-clr: rgb(89, 123, 150);
 }
 
+* {
+  padding: 0px;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -38,26 +42,26 @@
 
 .header h1 {
   display: flex;
-  gap: 18px;
-
+  gap: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
   align-items: center;
   font-size: 7rem;
-  margin-left: 70px;
+  /* margin-left: 70px; */
   margin-top: 220px;
-  width: max-content;
-  top: 18px;
-  left: 10px;
+  width: 100%;
 }
 
 .header img {
-  /* float: left; */
   width: 4rem;
   height: 4rem;
+  margin-left: 45px;
 }
 
 .footer {
-  font-size: 0.8rem;
-  padding: 3px;
+  font-size: 0.95rem;
+  padding: 12px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   /* border: dotted rgb(192, 205, 255) 7px; */
   color: aliceblue;
@@ -131,17 +135,27 @@ form input {
 form button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  background-color: #dcdedf;
+  color: #2a2a2a;
+  border: solid 1.5px ghostwhite;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 900;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: snow;
+  border: solid saddlebrown;
+}
+
+/* שינוי צבע ברקע כשנלחץ על הכפתור */
+button:active {
+  background-color: #003b63;
+  color: #070707;
+  transform: translateY(0);
+  font-weight: 300;
 }
 
 .fields-first,
@@ -157,10 +171,19 @@ input::placeholder {
   opacity: 1;
 }
 
-input:hover {
-  background-color: #276c6c;
+input:hover:placeholder-shown {
+  background-color: saddlebrown;
   color: black;
-  /* border: solid 10px bisque; */
+  border: solid 2px bisque;
+  font-weight: 600;
+}
+
+input:invalid {
+  border: 0.5px dashed red;
+}
+
+input:valid {
+  border: 0.8px dashed rgb(0, 255, 30);
 }
 
 button {
@@ -175,20 +198,26 @@ button {
   transition: background-color 0.3s ease, transform 0.1s ease; /* אנימציות */
 }
 
-button:hover {
-  background-color: #dcddde; /* צבע רקע כהה יותר */
-  transform: translateY(-2px); /* אפקט מרחף */
-}
-
-/* שינוי צבע ברקע כשנלחץ על הכפתור */
-button:active {
-  background-color: #003b63;
-  color: #fff;
-  transform: translateY(0); /* מבטל את האפקט המרחף */
-}
-
 span {
   margin-bottom: 40px;
+}
+
+.sign-in-link {
+  text-decoration: none;
+  color: #161616;
+  text-decoration: none;
+  font-weight: 900;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.sign-in-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.sign-in-link:focus-visible {
+  outline: 2px dashed #007bff;
+  outline-offset: 3px;
 }
 
 .right-third {
